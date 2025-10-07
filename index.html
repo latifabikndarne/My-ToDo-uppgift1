@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+<title> Att göra lista_test</title>
+
+<head>
+  <link rel="stylesheet" href="styles.css">
+
+</head>
+<style>
+  body {
+    background: linear-gradient(#fbcfcf, #c35e57de) no-repeat;
+    background-size: 100% 400%;
+  }
+
+  h1 {
+    color: black;
+    font-size: xxx-large;
+    margin-top: 0px;
+    margin-bottom: 10px;
+  }
+
+  .falling-box {
+  background-color: white;
+  width: 400px;
+  min-height: 220px;
+  text-align: center;
+  margin-left: 40%;
+  transform: translateY(-100px);
+  animation: bounceDown 1.2s ease-in-out forwards;
+  position: relative;
+}
+
+/* Innehållet är först osynligt */
+.falling-box .content {
+  opacity: 0;
+
+  transition: opacity 0.2s ease-in;
+
+  animation: showContent 1s ease-in forwards;
+  animation-delay: 1s; /* visas efter fallanimationen */
+}
+
+@keyframes bounceDown {
+  0% {
+    transform: translateY(-200px);
+  }
+  60% {
+    transform: translateY(30px);
+  }
+  80% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes showContent {
+  to {
+    opacity: 1;
+  }
+}
+
+  #inputTodo {
+    background-color: white;
+    width: 200px;
+    height: 25px;
+    border: 0.1px, solid, rgb(148, 147, 147);
+    border-radius: 1px;
+    font-size: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    transition:
+    border-color 0.3s ease;
+    border-width: 0.3s ease;
+  }
+
+  #inputTodo:focus {
+    border-color: rgb(56, 9, 241);
+    border-width: 2px;
+    outline: none;
+  }
+
+  #addTodoButton {
+    background-color: hwb(0 92% 7%);
+    color: black;
+    font-size: 18px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    width: 45px;
+    height: 30px;
+    border: 1px, solid, rgb(148, 147, 147);
+    border-radius: 1px;
+  }
+
+  #addTodoButton:hover {
+    background-color: rgb(208, 206, 206);
+  }
+
+  #todolist {
+    color: black;
+    list-style-type: none;
+    font-size: 25px;
+    padding-bottom: 15px;
+    padding-left: 5px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+    transform: translateY(-100px);
+    animation: fade-in 5s ease-in forwards;
+  }
+
+  /* Animationens keyframes */
+  @keyframes fade-in {
+    0% {
+     
+      transform: translateY(-500px);
+    }
+
+    60% {
+     
+      transform: translateY(0px);
+      /* lite för långt ner */
+    }
+
+    80% {
+     
+      transform: translateY(30px);
+      /* studsa upp lite */
+    }
+
+    100% {
+      
+      transform: translateY(0);
+      /* stanna */
+    }
+  }
+
+  small {
+    color: red;
+    font-style: italic;
+    animation: blink 2s ease-in-out infinite;
+  }
+
+  @keyframes blink {
+
+    0%,
+    100% {
+      opacity: 1;
+    }
+
+    50% {
+      opacity: 0;
+    }
+  }
+
+  .completed {
+    text-decoration: line-through;
+    color: rgb(125, 123, 123);
+    font-size: 25px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    transition:
+    color 1s ease, opacity 1s ease;
+  }
+
+  .trashcan {
+    font-size: large;
+    margin-left: 10px;
+    color: #252424;
+  }
+</style>
+
+<body>
+  <div class="falling-box">
+  <div class="content">
+      <h1> My ToDo </h1>
+    <p id="completed"> 0 completed </p>
+
+    <label for="inputTodo"> </label>
+    <input type="Text" id="inputTodo"> <!-- placeholder="Ny uppgift"-->
+    <button type="button" id="addTodoButton"> OK </button>
+
+    <br>
+
+    <small> info text</small>
+
+    <ul id="todolist">
+
+    </ul>
+    </div>
+  </div>
+
+  <script src="script.js"> </script>
+</body>
+
+</html>
