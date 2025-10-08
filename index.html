@@ -21,7 +21,7 @@
 
   .falling-box {
   background-color: white;
-  width: 400px;
+  width: 440px;
   min-height: 220px;
   text-align: center;
   margin-left: 40%;
@@ -66,12 +66,15 @@
     width: 200px;
     height: 25px;
     border: 0.1px, solid, rgb(148, 147, 147);
-    border-radius: 1px;
-    font-size: 20px;
-    font-family: 'Gill Sans';
+    border-radius: 4px;
+    font-size: 22px;
+    font-family: sans-serif;
+    font-weight:100;
+
     transition:
     border-color 0.3s ease;
     border-width: 0.3s ease;
+    margin: 2px;
   }
 
   #inputTodo:focus {
@@ -84,11 +87,12 @@
     background-color: hwb(0 92% 7%);
     color: black;
     font-size: 18px;
-    font-family: 'Gill Sans';
-    width: 45px;
+    font-family:sans-serif;
+    font-weight:500;
+    width: 48px;
     height: 30px;
     border: 1px, solid, rgb(148, 147, 147);
-    border-radius: 1px;
+    border-radius: 4px;
   }
 
   #addTodoButton:hover {
@@ -98,10 +102,11 @@
   #todolist {
     color: black;
     list-style-type: none;
-    font-size: 25px;
+    font-size: 22px;
     padding-bottom: 15px;
     padding-left: 5px;
-    font-family: 'Gill Sans';
+    font-family: sans-serif;
+    font-weight:520;
 
     transform: translateY(-100px);
     animation: fade-in 5s ease-in forwards;
@@ -154,8 +159,10 @@
   .completed {
     text-decoration: line-through;
     color: rgb(125, 123, 123);
-    font-size: 25px;
-    font-family: 'Gill Sans';
+    font-size: 18px;
+    font-family: sans-serif;
+    font-weight:520;
+    
     transition:
     color 1s ease, opacity 1s ease;
   }
@@ -163,7 +170,7 @@
   .trashcan {
     font-size: large;
     margin-left: 10px;
-    color: #252424;
+    color: hwb(0 48% 51%);
   }
 </style>
 
