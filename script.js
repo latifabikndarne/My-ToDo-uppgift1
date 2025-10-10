@@ -2,7 +2,7 @@
 const completedElement = document.querySelector("#completed");
 const inputTodo = document.querySelector("#inputTodo");
 const addTodoButton = document.querySelector("#addTodoButton");
-const infoTextElement = document.querySelector("small");
+const infoTextElement = document.querySelector("#infoText");
 const todolist = document.querySelector("#todolist");
 
 
@@ -54,7 +54,7 @@ itemText.addEventListener("click",
 
 // att lägga till papperskorgsikon
     const trashcan = document.createElement("span");
-    trashcan.innerHTML = "&#x1F5D1" //"\u{1F5D1}"; //"&#128465"; //papperskorgsikon
+    trashcan.innerHTML = "&#128465;" 
     trashcan.setAttribute("class", "trashcan");
     item.appendChild(trashcan);
 
