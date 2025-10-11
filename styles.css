@@ -130,14 +130,17 @@ body {
   #infoText {
       color: red;
       font-style: italic;
-      animation: blinkMessage 2s ease-in-out infinite;
+      animation: blinkMessage 1s infinite;
 }
   @keyframes blinkMessage {
-    0%, 100% {
-      opacity: 1;
+    0% {
+    opacity: 1;
   }
-    50% {
-      opacity: 0;
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
 
@@ -152,7 +155,7 @@ body {
   }
 
   .trashcan {
-      font-size: large;
-      margin-left: 15px;
-      color: hwb(0 48% 51%);
+      font-size:small;
+      color: rgb(250, 248, 248);
+      margin-left: 15px; 
   }

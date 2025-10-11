@@ -54,7 +54,7 @@ itemText.addEventListener("click",
 
 // att lägga till papperskorgsikon
     const trashcan = document.createElement("span");
-   trashcan.innerHTML = "&#128465;"
+   trashcan.innerHTML ="🗑️";//"&#128465;"
     trashcan.setAttribute("class", "trashcan");
     item.appendChild(trashcan);
 
