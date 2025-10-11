@@ -1,31 +1,31 @@
 body {
-    background: linear-gradient(#fbcfcf, #c35e57de) no-repeat;
-    background-size: 100% 400%;
+      background: linear-gradient(#fbcfcf, #c35e57de) no-repeat;
+      background-size: 100% 400%;
   }
 
   h1 {
-    color: black;
-    font-size: xxx-large;
-    margin-top: 0px;
-    margin-bottom: 10px;
+      color: black;
+      font-size: xxx-large;
+      margin-top: 0px;
+      margin-bottom: 10px;
   }
 
   .falling-box {
-    background-color: white;
-    width: 440px;
-    min-height: 160px;
-    text-align: center;
-    margin-left: 40%;
-    transform: translateY(-100px);
-    animation: bounceDown 1.2s ease-in-out forwards;
-    position: relative;
+      background-color: white;
+      text-align: center;
+      width: 440px;
+      min-height: 160px;
+      margin-left: 40%;
+      transform: translateY(-100px);
+      animation: bounceDown 1.2s ease-in-out forwards;
+      position: relative;
   }
 
   .falling-box .content {
-    opacity: 0;
-    transition: opacity 0.2s ease-in;
-    animation: showContent 1s ease-in forwards;
-    animation-delay: 1s;
+      opacity: 0;
+      transition: opacity 0.2s ease-in;
+      animation: showContent 1s ease-in forwards;
+      animation-delay: 1s;
   }
 
   @keyframes bounceDown {
@@ -47,70 +47,64 @@ body {
       opacity: 1;
     }
   }
-
   #inputTodo {
-    background-color: white;
-    width: 200px;
-    height: 25px;
-    border: 0.1px, solid, rgb(148, 147, 147);
-    border-radius: 4px;
-    font-size: 19px;
-    font-family: sans-serif;
-    font-weight: 548;
-    transition:
+      background-color: white;
+      font-size: 19px;
+      font-family: sans-serif;
+      font-weight: 548;
+      width: 200px;
+      height: 25px;
+      border: 0.1px, solid, rgb(148, 147, 147);
+      border-radius: 4px;
+      transition:
       border-color 0.3s ease;
-    border-width: 0.3s ease;
-    margin: 2px;
+      border-width: 0.3s ease;
+      margin: 2px;
   }
-
   #inputTodo:focus {
-    border-color: rgb(56, 9, 241);
-    border-width: 2px;
-    outline: none;
+      border-color: rgb(56, 9, 241);
+      border-width: 2px;
+      outline: none;
   }
-
   #addTodoButton {
-    background-color: hwb(0 92% 7%);
-    color: black;
-    font-size: 18px;
-    font-family: sans-serif;
-    font-weight: 480;
-    width: 48px;
-    height: 30px;
-    border: 1px, solid, rgb(148, 147, 147);
-    border-radius: 4px;
+      background-color: hwb(0 92% 7%);
+      color: black;
+      font-size: 18px;
+      font-family: sans-serif;
+      font-weight: 480;
+      width: 48px;
+      height: 30px;
+      border: 1px, solid, rgb(148, 147, 147);
+      border-radius: 4px;
   }
-
   #addTodoButton:hover {
-    background-color: rgb(208, 206, 206);
+      background-color: rgb(208, 206, 206);
   }
-
   #todolist {
-    color: black;
-    list-style-type: none;
-    font-size: 22px;
-    padding-bottom: 6px;
-    padding-left: 5px;
-    font-family: sans-serif;
-    font-weight: 520;
+      color: black;
+      list-style-type: none;
+      font-family: sans-serif;
+      font-size: 22px;
+      font-weight: 520;
+      padding-bottom: 6px;
+      padding-left: 5px;
+      
   }
-
   #todolist li {
-    padding: 10px;
-    transform: translateY(-10px);
-    opacity: 0;
-    animation: fade-in 0.3s ease-in forwards;
+      padding: 8px;
+      transform: translateY(-10px);
+      opacity: 0;
+      animation: fade-in 0.3s ease-in forwards;
   }
-  #todolist li:nth-child(1) {
-    animation-delay: 0s;
+    #todolist li:nth-child(1) {
+      animation-delay: 0s;
   }
-  #todolist li:nth-child(2) {
-    animation-delay: 0.2s;
+   #todolist li:nth-child(2) {
+      animation-delay: 0.2s;
   }
-  #todolist li:nth-child(3) {
-    animation-delay: 0.4s;
+    #todolist li:nth-child(3) {
+      animation-delay: 0.4s;
   }
-
   @keyframes fade-in {
     0% {
       transform: translateY(-10px);
@@ -129,34 +123,31 @@ body {
       opacity: 1;
     }
   }
-
   #infoText {
-    color: red;
-    font-style: italic;
-    animation: blink 1s ease-in-out infinite;
-  }
-  @keyframes blink {
-    0%,
-    100% {
+      color: red;
+      font-style: italic;
+      animation: blinker 2s ease-in-out infinite;
+}
+  @keyframes blinker {
+    0%, 100% {
       opacity: 1;
-    }
+  }
     50% {
       opacity: 0;
-    }
-  } 
-
+  }
+}
   .completed {
-    text-decoration: line-through;
-    color: rgb(125, 123, 123);
-    font-size: 22px;
-    font-family: sans-serif;
-    font-weight: 520;
-    transition:
+      text-decoration: line-through;
+      color: rgb(125, 123, 123);
+      font-family: sans-serif;
+      font-size: 22px;
+      font-weight: 520;
+      transition:
       color 1s ease, opacity 1s ease;
   }
 
   .trashcan {
-    font-size: large;
-    margin-left: 10px;
-    color: hwb(0 48% 51%);
+      font-size: large;
+      margin-left: 15px;
+      color: hwb(0 48% 51%);
   }
