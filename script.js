@@ -1,5 +1,5 @@
 // Att deklarera en variabel
-const completedElement = document.querySelector("#completed");
+const completedElement = document.querySelector("#completedTask");
 const inputTodo = document.querySelector("#inputTodo");
 const addTodoButton = document.querySelector("#addTodoButton");
 const infoTextElement = document.querySelector("#infoText");
@@ -36,13 +36,13 @@ itemText.addEventListener("click",
     
     function () {
 
-        if (itemText.getAttribute("class") == "completed") {
+        if (itemText.getAttribute("class") == "completedTask") {
             itemText.setAttribute("class", "");
             completed--;
             completedElement.innerText = "Utförda uppgifter: " + completed;
 
         } else {
-            itemText.setAttribute("class", "completed");
+            itemText.setAttribute("class", "completedTask");
             completed++;
             completedElement.innerText = completed + " completed";
         }
